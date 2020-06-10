@@ -1,0 +1,50 @@
+@charset "utf-8";
+body,ul {
+	padding: 0;
+	margin: 0;
+	
+}
+ul {
+	list-style: none;
+}
+.wrap {
+	position: relative;
+	width: 1200px;
+	height: 360px;
+	margin: 100px auto;
+}
+.content {
+	position: absolute;
+	width: 1200px;
+	height: 360px;
+}
+.content li{
+	position: absolute;
+	background-size: 100% 100%;
+	cursor: pointer;
+}
+.wrap a {
+	position: absolute;
+	display: none;
+	z-index: 2;
+	top: 50%;
+	width: 60px;
+	height: 60px;
+	margin-top: -30px;
+	font: 36px/60px "宋体";
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	background: rgb(255, 100, 0);
+	background: rgba(255, 100, 0, .6);
+	transition: background 1s ease;
+}
+.wrap a:hover {
+	background: rgb(255, 100, 0);
+}
+.prev {
+	left: 30px;
+}
+.next {
+	right: 30px;
+}

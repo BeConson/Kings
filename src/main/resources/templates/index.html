@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>首页</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+		<link rel="stylesheet" href="../static/css/conson.css"  th:href="@{/css/conson.css}">
+		<link rel="stylesheet" href="../static/css/3DPhoto.css" th:href="@{/css/3DPhoto.css}">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+		<link rel="stylesheet" href="../static/css/mobilePicture.css" th:href="@{/css/mobilePicture.css}">
+	</head>
+
+	<body class="body">
+
+		<!--导航-->
+		<nav th:replace="PublicTemplate :: menu"></nav>
+
+		<!-- PC 3D 图片轮播,手机端设置隐藏 -->
+		<div class="wrap m-mobile-hide animated bounceInDown" id="wrap">
+			<ul class="content"></ul>
+			<a href="javascript:;" class="prev">&#60;</a>
+			<a href="javascript:;" class="next">&#62;</a>
+		</div>
+		<br><br>
+		<!-- mobile 图片轮播,手机端设置显示 -->
+		<div class="slider m-mobile-show" >
+			<div class="slide"><img src="https://consonblog-1257792125.cos.ap-chengdu.myqcloud.com/Kings/indexBigPicture/ake.jpg" /><p>阿珂</p></div>
+			<div class="slide"><img src="https://consonblog-1257792125.cos.ap-chengdu.myqcloud.com/Kings/indexBigPicture/daqiao.jpg" /><p>大桥</p></div>
+			<div class="slide"><img src="https://consonblog-1257792125.cos.ap-chengdu.myqcloud.com/Kings/indexBigPicture/houzi.jpg" /><p>孙悟空</p></div>
+			<div class="slide"><img src="https://consonblog-1257792125.cos.ap-chengdu.myqcloud.com/Kings/indexBigPicture/diaochan.jpg" /><p>貂蝉</p></div>
+			<div class="slide"><img src="https://consonblog-1257792125.cos.ap-chengdu.myqcloud.com/Kings/indexBigPicture/guanyu.jpg" /><p>关羽</p></div>
+			<div class="slide"><img src="https://consonblog-1257792125.cos.ap-chengdu.myqcloud.com/Kings/indexBigPicture/luna.jpg" /><p>露娜</p></div>
+			<div class="slide"><img src="https://consonblog-1257792125.cos.ap-chengdu.myqcloud.com/Kings/indexBigPicture/yingzheng.jpg" /><p>嬴政</p></div>
+			<div class="slide"><img src="https://consonblog-1257792125.cos.ap-chengdu.myqcloud.com/Kings/indexBigPicture/zhaoyun.jpg" /><p>拖到屏幕边缘可以切换图片哦</p></div>
+		</div>
+
+		<br>
+
+		<!-- 中间 -->
+		<div class="m-padded-tb-large ">
+			<div class="ui container">
+				<div class="ui stackable grid">
+					<!-- 左边内容 -->
+					<div class="five wide column">
+
+						<!-- 最新资讯 -->
+						<div class="ui segment animated bounceInLeft">
+							<div class="ui secondary segment">
+								<div class="ui two column grid">
+									<div class="column">
+										<i class="book icon"></i>最新资讯
+									</div>
+									<div class="right aligned column">
+										<a th:href="@{/Allinformation}" target="_blank"><i class="newspaper outline icon"></i> 全部资讯</a>
+									</div>
+
+									<!-- 资讯内容 -->
+									<div class="ui middle  aligned animated list">
+										<div class="item" th:each="kings : ${recommendKings}">
+											<img class="ui avatar image" th:src="@{${kings.heroesPicture}}" src="../static/img/hy.png">
+											<div class="content">
+												<a th:href="@{/information/{id}(id=${kings.id})}" href="#" class="header" th:text="${kings.title}"></a>
+											</div><br>
+										</div>
+
+									</div><br><br>
+
+								</div>
+							</div>
+						</div>
+
+						<!-- 英雄 -->
+						<div class="ui segment animated bounceInRight">
+							<div class="ui  secondary segment">
+								<div class="ui  two column grid">
+									<div class="column">
+										<i class="user icon"></i>英雄
+									</div>
+									<div class="right aligned column">
+										<a th:href="@{/AllHeroes/-1}" target="_blank"><i class="user outline icon"></i> 全部英雄</a>
+									</div>
+
+								</div>
+							</div>
+
+							&nbsp;&nbsp;<a th:href="@{/AllHeroes/40}" href="#" class="ui blue image label">
+								<img th:src="@{https://consonblog-1257792125.cos.ap-chengdu.myqcloud.com/Kings/heroes/cwj.jpg}" src="../static/img/cwj.jpg">
+								蔡文姬
+							</a>
+
+							&nbsp;&nbsp;<a th:href="@{/AllHeroes/70}" href="#" class="ui teal image label">
+								<img th:src="@{https://consonblog-1257792125.cos.ap-chengdu.myqcloud.com/Kings/heroes/ak.jpg}" src="../static/img/ak.jpg">
+								阿珂
+							</a>
+
+							&nbsp;&nbsp;<a th:href="@{/AllHeroes/40}" href="#" class="ui yellow image label">
+								<img th:src="@{https://consonblog-1257792125.cos.ap-chengdu.myqcloud.com/Kings/heroes/zz.jpg}" src="../static/img/zz.jpg">
+								庄周
+							</a>
+							<br><br>
+
+							&nbsp;&nbsp;<a th:href="@{/AllHeroes/42}" href="#" class="ui green image label">
+								<img th:src="@{https://consonblog-1257792125.cos.ap-chengdu.myqcloud.com/Kings/heroes/zgl.jpg}" src="../static/img/zgl.jpg">
+								诸葛亮
+							</a>
+
+							&nbsp;&nbsp;<a th:href="@{/AllHeroes/41}" href="#" class="ui red image label">
+								<img th:src="@{https://consonblog-1257792125.cos.ap-chengdu.myqcloud.com/Kings/heroes/ssx.png}" src="../static/img/ssx.png">
+								孙尚香
+							</a>
+
+							&nbsp;&nbsp;<a th:href="@{/AllHeroes/41}" href="#" class="ui blue image label">
+								<img th:src="@{https://consonblog-1257792125.cos.ap-chengdu.myqcloud.com/Kings/heroes/lb.png}" src="../static/img/lb.png">
+								鲁班
+							</a>
+							<br><br>
+
+							&nbsp;&nbsp;<a th:href="@{/AllHeroes/41}" href="#" class="ui teal image label">
+								<img th:src="@{https://consonblog-1257792125.cos.ap-chengdu.myqcloud.com/Kings/heroes/mkbl.png}" src="../static/img/mkbl.png">
+								马可波罗
+							</a>
+
+							<a th:href="@{/AllHeroes/42}" href="#" class="ui red image label">
+								<img th:src="@{https://consonblog-1257792125.cos.ap-chengdu.myqcloud.com/Kings/heroes/dj.png}" src="../static/img/dj.png">
+								妲己
+							</a>
+
+							&nbsp;&nbsp;<a th:href="@{/AllHeroes/41}" href="#" class="ui green image label">
+								<img th:src="@{https://consonblog-1257792125.cos.ap-chengdu.myqcloud.com/Kings/heroes/lyf.jpg}" src="../static/img/lyf.jpg">
+								李元芳
+							</a>
+							<br><br>
+
+							&nbsp;&nbsp;<a th:href="@{/AllHeroes/42}" href="#" class="ui yellow image label">
+								<img th:src="@{https://consonblog-1257792125.cos.ap-chengdu.myqcloud.com/Kings/heroes/aql.png}" src="../static/img/aql.png">
+								安其拉
+							</a>
+
+							&nbsp;&nbsp;<a th:href="@{/AllHeroes/41}" href="#" class="ui orange image label">
+								<img th:src="@{https://consonblog-1257792125.cos.ap-chengdu.myqcloud.com/Kings/heroes/hy.png}" src="../static/img/hy.png">
+								后裔
+							</a>
+
+							&nbsp;&nbsp;<a th:href="@{/AllHeroes/42}" href="#" class="ui orange image label">
+								<img th:src="@{https://consonblog-1257792125.cos.ap-chengdu.myqcloud.com/Kings/heroes/xq.jpg}" src="../static/img/xq.jpg">
+								小乔
+							</a>
+							<br><br>
+						</div>
+
+						<!-- 英雄类型 -->
+						<div class="ui m-mobile-hide segment animated bounceInUp">
+							<div class="ui secondary segment">
+								<div class="ui two column grid">
+									<div class=" column">
+										<i class="users icon"></i> 英雄类型
+									</div>
+
+								</div>
+							</div>
+
+							<!-- 英雄																																													 -->
+							<div class="ui fluid vertical menu">
+								<a th:href="@{/AllHeroes/76}" href="#" class="item">
+									坦克
+									<div class="ui orange mini tag label">23</div>
+								</a>
+							</div>
+
+							<div class="ui fluid vertical menu">
+								<a th:href="@{/AllHeroes/75}" href="#" class="item">
+									战士
+									<div class="ui teal mini tag label">32</div>
+								</a>
+							</div>
+
+							<div class="ui fluid vertical menu">
+								<a th:href="@{/AllHeroes/70}" href="#" class="item">
+									刺客
+									<div class="ui yellow mini tag label">19</div>
+								</a>
+							</div>
+
+							<div class="ui fluid vertical menu">
+								<a th:href="@{/AllHeroes/42}" href="#" class="item">
+									法师
+									<div class="ui red mini tag label">30</div>
+								</a>
+							</div>
+
+							<div class="ui fluid vertical menu">
+								<a th:href="@{/AllHeroes/41}" href="#" class="item">
+									射手
+									<div class="ui blue mini tag label">13</div>
+								</a>
+							</div>
+
+							<div class="ui fluid vertical menu">
+								<a th:href="@{/AllHeroes/40}" href="#" class="item">
+									辅助
+									<div class="ui green mini tag label">15</div>
+								</a>
+							</div>
+
+						</div>
+
+					</div>
+
+					<!-- 右边内容 -->
+					<div class=" eleven wide column animated bounceInRight">
+						<!--统计栏-->
+<!--						 <div class="ui segment">-->
+<!--									<div class="ui two column grid" >-->
+<!--										<div class="column">-->
+<!--											<h3 class="ui teal header-no" >内容</h3>-->
+<!--										</div>-->
+<!--										<div class="right aligned column">-->
+<!--											共 <h3 class="ui orange header m-inline-block" th:text="${page.totalElements}">520</h3> 篇-->
+<!--										</div>-->
+<!--									</div>-->
+<!--								</div>-->
+
+						<!-- 内容 -->
+						<div class="ui segment">
+							<div class="ui padded vertical segment m-padded-lrSmall" th:each="kings : ${page.content}">
+								<div class="ui middle aligned stackable grid">
+									<div class="five wide column">
+										<a href="information.html" target="_blank" th:href="@{/information/{id}(id=${kings.id})}">
+											<img th:src="@{${kings.picture}}" src="../static/img/wz8.jpg" alt="" class="ui rounded image m-mobile-index-picture m-pc-index-picture">
+										</a>
+									</div>
+									<div class="eleven wide column">
+										<a href="information.html" target="_blank" th:href="@{/information/{id}(id=${kings.id})}"><h3 class="ui header" th:text="${kings.title}">SpringMVC执行原理</h3></a><br>
+										<a href="information.html" target="_blank" th:href="@{/information/{id}(id=${kings.id})}"><p th:text="|${kings.description}...|" class="m-text" style="color: #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.前端控制器就是DispatcherServlet
+											2.页面控制器就是Controller 3.模型就是业务层(service)以及下面的Dao层 
+											......</p></a><br>
+										<div class="ui grid">
+											<div class="eleven wide column">
+												<div class="ui mini horizontal link list">
+													<div class="item">
+														<img th:src="@{/img/头像.jpg}" src="../static/img/头像.jpg" class="ui avatar image">
+													</div>
+													<div class="item">
+														<i class="calendar icon"></i><span th:text="${#dates.format(kings.updateTime,'yyyy-MM-dd')}">2020-3-30</span>
+													</div>
+												</div>
+											</div>
+											<div class="left aligned five wide column">
+												<a class="ui blue mini tag label" th:text="${kings.type.name}">Java</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+						</div>
+
+						<!-- footer -->
+						<div class="ui segment" th:if="${page.totalPages}>1">
+							<div class="ui two column grid">
+								<div class="column">
+									<a href="" th:href="@{/(page=${page.number}-1)}"
+									   th:unless="${page.first}" class="ui mini green basic button">上一页</a>
+								</div>
+								<div class="right aligned column">
+									<a href="" th:href="@{/(page=${page.number}+1)}"
+									   th:unless="${page.last}" class="ui mini green basic button">下一页</a>
+								</div>
+							</div>
+						</div><br>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<br>
+
+		<!-- 底部 -->
+		<footer th:replace="PublicTemplate :: footer"></footer>
+
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+		<script th:src="@{/js/stopExecutionOnTimeout.js}" src="../static/js/stopExecutionOnTimeout.js" type="text/javascript"></script>
+		<script th:src="@{/js/conson.js}" src="../static/js/conson.js" type="text/javascript"></script>
+		<script th:src="@{/js/3DPhoto.js}" src="../static/js/3DPhoto.js" type="text/javascript"></script>
+		<script th:src="@{/js/3DPhotoTools.js}" src="../static/js/3DPhotoTools.js" type="text/javascript"></script>
+
+
+		<script>
+			window.addEventListener('load', onWndLoad, false);
+			function onWndLoad() {
+				var slider = document.querySelector('.slider');
+				var sliders = slider.children;
+				var initX = null;
+				var transX = 0;
+				var rotZ = 0;
+				var transY = 0;
+				var curSlide = null;
+				var Z_DIS = 50;
+				var Y_DIS = 10;
+				var TRANS_DUR = 0.4;
+				var images = document.querySelectorAll('img');
+				for (var i = 0; i < images.length; i++) {
+					if (window.CP.shouldStopExecution(1)) {
+						break;
+					}
+					images[i].onmousemove = function (e) {
+						e.preventDefault();
+					};
+					images[i].ondragstart = function (e) {
+						return false;
+					};
+				}
+				window.CP.exitedLoop(1);
+				function init() {
+					var z = 0, y = 0;
+					for (var i = sliders.length - 1; i >= 0; i--) {
+						if (window.CP.shouldStopExecution(2)) {
+							break;
+						}
+						sliders[i].style.transform = 'translateZ(' + z + 'px) translateY(' + y + 'px)';
+						z -= Z_DIS;
+						y += Y_DIS;
+					}
+					window.CP.exitedLoop(2);
+					attachEvents(sliders[sliders.length - 1]);
+				}
+				function attachEvents(elem) {
+					curSlide = elem;
+					curSlide.addEventListener('mousedown', slideMouseDown, false);
+					curSlide.addEventListener('touchstart', slideMouseDown, false);
+				}
+				init();
+				function slideMouseDown(e) {
+					if (e.touches) {
+						initX = e.touches[0].clientX;
+					} else {
+						initX = e.pageX;
+					}
+					document.addEventListener('mousemove', slideMouseMove, false);
+					document.addEventListener('touchmove', slideMouseMove, false);
+					document.addEventListener('mouseup', slideMouseUp, false);
+					document.addEventListener('touchend', slideMouseUp, false);
+				}
+				var prevSlide = null;
+				function slideMouseMove(e) {
+					var mouseX;
+					if (e.touches) {
+						mouseX = e.touches[0].clientX;
+					} else {
+						mouseX = e.pageX;
+					}
+					transX += mouseX - initX;
+					rotZ = transX / 20;
+					transY = -Math.abs(transX / 15);
+					curSlide.style.transition = 'none';
+					curSlide.style.webkitTransform = 'translateX(' + transX + 'px)' + ' rotateZ(' + rotZ + 'deg)' + ' translateY(' + transY + 'px)';
+					curSlide.style.transform = 'translateX(' + transX + 'px)' + ' rotateZ(' + rotZ + 'deg)' + ' translateY(' + transY + 'px)';
+					var j = 1;
+					for (var i = sliders.length - 2; i >= 0; i--) {
+						if (window.CP.shouldStopExecution(3)) {
+							break;
+						}
+						sliders[i].style.webkitTransform = 'translateX(' + transX / (2 * j) + 'px)' + ' rotateZ(' + rotZ / (2 * j) + 'deg)' + ' translateY(' + Y_DIS * j + 'px)' + ' translateZ(' + -Z_DIS * j + 'px)';
+						sliders[i].style.transform = 'translateX(' + transX / (2 * j) + 'px)' + ' rotateZ(' + rotZ / (2 * j) + 'deg)' + ' translateY(' + Y_DIS * j + 'px)' + ' translateZ(' + -Z_DIS * j + 'px)';
+						sliders[i].style.transition = 'none';
+						j++;
+					}
+					window.CP.exitedLoop(3);
+					initX = mouseX;
+					e.preventDefault();
+					if (Math.abs(transX) >= curSlide.offsetWidth - 30) {
+						document.removeEventListener('mousemove', slideMouseMove, false);
+						document.removeEventListener('touchmove', slideMouseMove, false);
+						curSlide.style.transition = 'ease 0.2s';
+						curSlide.style.opacity = 0;
+						prevSlide = curSlide;
+						attachEvents(sliders[sliders.length - 2]);
+						slideMouseUp();
+						setTimeout(function () {
+							slider.insertBefore(prevSlide, slider.firstChild);
+							prevSlide.style.transition = 'none';
+							prevSlide.style.opacity = '1';
+							slideMouseUp();
+						}, 201);
+						return;
+					}
+				}
+				function slideMouseUp() {
+					transX = 0;
+					rotZ = 0;
+					transY = 0;
+					curSlide.style.transition = 'cubic-bezier(0,1.95,.49,.73) ' + TRANS_DUR + 's';
+					curSlide.style.webkitTransform = 'translateX(' + transX + 'px)' + 'rotateZ(' + rotZ + 'deg)' + ' translateY(' + transY + 'px)';
+					curSlide.style.transform = 'translateX(' + transX + 'px)' + 'rotateZ(' + rotZ + 'deg)' + ' translateY(' + transY + 'px)';
+					var j = 1;
+					for (var i = sliders.length - 2; i >= 0; i--) {
+						sliders[i].style.transition = 'cubic-bezier(0,1.95,.49,.73) ' + TRANS_DUR / (j + 0.9) + 's';
+						sliders[i].style.webkitTransform = 'translateX(' + transX + 'px)' + 'rotateZ(' + rotZ + 'deg)' + ' translateY(' + Y_DIS * j + 'px)' + ' translateZ(' + -Z_DIS * j + 'px)';
+						sliders[i].style.transform = 'translateX(' + transX + 'px)' + 'rotateZ(' + rotZ + 'deg)' + ' translateY(' + Y_DIS * j + 'px)' + ' translateZ(' + -Z_DIS * j + 'px)';
+						j++;
+					}
+					document.removeEventListener('mousemove', slideMouseMove, false);
+					document.removeEventListener('touchmove', slideMouseMove, false);
+				}
+			}
+		</script>
+
+	</body>
+</html>

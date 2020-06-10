@@ -1,0 +1,5 @@
+2020-03-29 22:22:13.211  INFO 2236 --- [restartedMain] com.coco.kings.KingsApplication          : Starting KingsApplication on LAPTOP-N85V2QDD with PID 2236 (started by 康森 in D:\A1-idea项目\kings)
+2020-03-29 22:22:13.215  INFO 2236 --- [restartedMain] com.coco.kings.KingsApplication          : The following profiles are active: pro
+2020-03-29 22:22:17.173  WARN 2236 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-03-29 22:22:17.462  WARN 2236 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-03-29 22:22:17.637  INFO 2236 --- [restartedMain] com.coco.kings.KingsApplication          : Started KingsApplication in 5.352 seconds (JVM running for 7.327)

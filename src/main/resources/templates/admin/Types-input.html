@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>后台管理</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+		<link rel="stylesheet" href="../../static/css/conson.css"  th:href="@{/css/conson.css}">
+	</head>
+
+	<body class="body">
+
+		<!--导航-->
+		<nav th:replace="admin/_PublicTemplate :: nav"></nav><br><br>
+
+		<!-- 详情内容 -->
+		<div class=" m-container m-padded-tb-big animated bounceInRight">
+			<div class="ui container ">
+				<div class="ui buttons">
+					<button class="ui button"><a th:href="@{/kings/kings}" href="#" style="color: cadetblue">返回后台</a></button>
+					<button class="ui button"><a th:href="@{/kings/Types}" href="#" style="color: cadetblue">分类信息</a></button>
+<!--					<button class="ui button" onclick="window.history.go(-1)">返回上级</button>-->
+				</div>
+				<!-- 二级菜单 -->
+				<div class="ui segment ">
+					<div id="context2">
+						<div class="ui secondary pointing menu">
+							<a class="item" data-tab="one">分类</a>
+						</div>
+						<!-- 分类 -->
+						<div class="ui active tab segment" data-tab="one">
+							<form action="#" method="post" th:object="${type}" th:action="*{id}==null ? @{/kings/TypesIn} : @{/kings/TypesIn/{id}(id=*{id})}"  class="ui form">
+								<input type="hidden" name="id" th:value="*{id}">
+								<div class="field">
+									<div class="ui left labeled input">
+										<label class="ui label">新 增</label>
+										<input type="text" name="name" placeholder="分类名称" th:value="*{name}"/>
+									</div>
+								</div>
+								<!--/*/
+								<div class="ui error message"></div>
+								<div class="ui negative message" th:if="${#fields.hasErrors('name')}">
+									<p th:errors="*{name}">提交失败</p>
+								</div>
+								/*/-->
+								<div class="ui center aligned container">
+									<!-- <button type="button" class="ui mini button" onclick="window.history.go(-1)">返回</button>-->
+									<button class="ui mini submit button">添加</button>
+								</div>
+
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br><br><br><br><br>
+
+		<!-- 底部 -->
+		<footer th:replace="admin/_PublicTemplate :: footer"></footer>
+
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+		<script>
+
+			$('.menu.toggle').click(function() {
+				$('.m-item').toggleClass('m-mobile-hide');
+			});
+
+			$('.ui.dropdown')
+				.dropdown();
+
+			$('#context2 .menu .item')
+				.tab({
+					// special keyword works same as above
+					context: 'parent'
+				});
+
+			$('.ui.checkbox')
+			  .checkbox()
+			;
+
+			// 前端分类校验，开启后端校验时，可以关闭
+			// $('.ui.form').form({
+			// 	fields: {
+			// 		title: {
+			// 			identifier: 'name',
+			// 			rules: [{
+			// 				type: 'empty',
+			// 				prompt: '请正确输入分类名称哦'
+			// 			}]
+			// 		}
+			// 	}
+			// });
+
+			// 关闭校验提示信息
+			// $('.message.close')
+			// 	.on('click',function () {
+			// 		$(this).closest('.message').transition('fade');
+			// 	});
+		</script>
+
+	</body>
+</html>

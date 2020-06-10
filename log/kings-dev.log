@@ -1,0 +1,42 @@
+2020-04-20 19:09:02.562  INFO 14268 --- [main] com.coco.kings.KingsApplicationTests     : Starting KingsApplicationTests on LAPTOP-N85V2QDD with PID 14268 (started by 康森 in D:\A1-idea项目\kings)
+2020-04-20 19:09:02.573 DEBUG 14268 --- [main] com.coco.kings.KingsApplicationTests     : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-20 19:09:02.573  INFO 14268 --- [main] com.coco.kings.KingsApplicationTests     : The following profiles are active: dev
+2020-04-20 19:09:03.820  INFO 14268 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-04-20 19:09:04.858  INFO 14268 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1007ms. Found 4 JPA repository interfaces.
+2020-04-20 19:09:06.565  INFO 14268 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-04-20 19:09:06.770  INFO 14268 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-04-20 19:09:07.040  INFO 14268 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-04-20 19:09:08.331  INFO 14268 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-04-20 19:09:10.010  INFO 14268 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-04-20 19:09:10.049  INFO 14268 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-04-20 19:09:12.294  INFO 14268 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-04-20 19:09:12.308  INFO 14268 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-04-20 19:09:14.723  WARN 14268 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-20 19:09:15.816  INFO 14268 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-20 19:09:16.858  INFO 14268 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-04-20 19:09:17.974  INFO 14268 --- [main] com.coco.kings.KingsApplicationTests     : Started KingsApplicationTests in 16.161 seconds (JVM running for 17.823)
+2020-04-20 19:09:18.213  INFO 14268 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-04-20 19:09:18.216  INFO 14268 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-04-20 19:09:18.221  INFO 14268 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-04-20 19:09:18.238  INFO 14268 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-04-20 19:14:52.314  INFO 19976 --- [main] com.coco.kings.KingsApplicationTests     : Starting KingsApplicationTests on LAPTOP-N85V2QDD with PID 19976 (started by 康森 in D:\A1-idea项目\kings)
+2020-04-20 19:14:52.317 DEBUG 19976 --- [main] com.coco.kings.KingsApplicationTests     : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-20 19:14:52.317  INFO 19976 --- [main] com.coco.kings.KingsApplicationTests     : The following profiles are active: dev
+2020-04-20 19:14:53.581  INFO 19976 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-04-20 19:14:53.839  INFO 19976 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 230ms. Found 4 JPA repository interfaces.
+2020-04-20 19:14:55.449  INFO 19976 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-04-20 19:14:55.623  INFO 19976 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-04-20 19:14:55.904  INFO 19976 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-04-20 19:14:57.589  INFO 19976 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-04-20 19:14:59.617  INFO 19976 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-04-20 19:14:59.687  INFO 19976 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-04-20 19:15:02.449  INFO 19976 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-04-20 19:15:02.470  INFO 19976 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-04-20 19:15:06.735  WARN 19976 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-20 19:15:07.803  INFO 19976 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-20 19:15:08.191  INFO 19976 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-04-20 19:15:09.018  INFO 19976 --- [main] com.coco.kings.KingsApplicationTests     : Started KingsApplicationTests in 17.406 seconds (JVM running for 19.191)
+2020-04-20 19:15:09.434  INFO 19976 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-04-20 19:15:09.437  INFO 19976 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-04-20 19:15:09.457  INFO 19976 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-04-20 19:15:09.488  INFO 19976 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
