@@ -8,8 +8,6 @@
 
 ○ 后端工具： Intellij IDEA 2019.3
 
-○ 脑图：有道云笔记
-
 ○ 插件：
 - typo.css 排版
 - prism 代码高亮
@@ -45,16 +43,16 @@
 ### 登入：
 ![](https://consonblog-1257792125.cos.ap-chengdu.myqcloud.com/%E6%96%87%E7%AB%A0%E7%94%A8%E5%9B%BE/kings%E5%B0%8F%E7%AB%99/6.png)
 
-### 后台：
+### 后台管理：
 ![](https://consonblog-1257792125.cos.ap-chengdu.myqcloud.com/%E6%96%87%E7%AB%A0%E7%94%A8%E5%9B%BE/kings%E5%B0%8F%E7%AB%99/7.png)
 
-### 资讯信息：
+### 资讯管理：
 ![](https://consonblog-1257792125.cos.ap-chengdu.myqcloud.com/%E6%96%87%E7%AB%A0%E7%94%A8%E5%9B%BE/kings%E5%B0%8F%E7%AB%99/8.png)
 
-### 分类信息：
+### 分类管理：
 ![](https://consonblog-1257792125.cos.ap-chengdu.myqcloud.com/%E6%96%87%E7%AB%A0%E7%94%A8%E5%9B%BE/kings%E5%B0%8F%E7%AB%99/9.png)
 
-### 标签信息：
+### 标签管理：
 ![](https://consonblog-1257792125.cos.ap-chengdu.myqcloud.com/%E6%96%87%E7%AB%A0%E7%94%A8%E5%9B%BE/kings%E5%B0%8F%E7%AB%99/10.png)
 
 ○ 美中不足,还得继续学习, Up!🎈
