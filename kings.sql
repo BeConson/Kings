@@ -99,7 +99,7 @@ CREATE TABLE `t_kings`  (
   CONSTRAINT `FKawcvft8nfh0k7bvb509a5e2h6` FOREIGN KEY (`user_id`) REFERENCES `t_user` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `FKecwqb9nybbt15l190defee21t` FOREIGN KEY (`type_id`) REFERENCES `t_all_heroes` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
-
+ 
 -- ----------------------------
 -- Records of t_kings
 -- ----------------------------
