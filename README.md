@@ -26,12 +26,9 @@
 
 ## 二、原型设计与项目完成展示
 
-<center>
-项目地址：<a href="http://www.conson.club:8848">http://www.conson.club</a>
-</center>
 
-<center>
+项目地址：<a href="http://www.conson.club:8848">http://www.conson.club</a>
+
 展示地址：<a href="http://www.conson.club:4000/2020/04/13/Kings%E8%B5%84%E8%AE%AF%E5%B0%8F%E7%AB%99/">http://www.conson.club/Kings</a>
-</center>
 
 ○ 美中不足,还得继续学习, Up!🎈
