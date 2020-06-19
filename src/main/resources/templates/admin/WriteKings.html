@@ -21,7 +21,7 @@
     <div class="ui container ">
         <div class="ui buttons">
             <button class="ui button"><a th:href="@{/kings/kings}" href="#" style="color: cadetblue">返回后台</a></button>
-            <button class="ui button"><a href="#" th:href="@{/kings/WriteKings/input}" style="color: cadetblue">新增博客</a>
+            <button class="ui button"><a href="#" th:href="@{/kings/WriteKings/input}" style="color: cadetblue">新增资讯</a>
             </button>
         </div>
         <!-- 二级菜单 -->
@@ -35,6 +35,7 @@
 
                     <!-- 查询列表信息-->
                     <div class="ui  form"><br>
+                        <!--							<form action="#" method="post" class="ui segment form">-->
                         <div class="fields">
                             <div class="field">
                                 <input type="text" name="title" placeholder="标题"/>&emsp;
@@ -72,10 +73,18 @@
                             </div>
                         </div>
 
+                        <!--							</form>-->
                     </div>
 
                     <input type="hidden" name="page">
-                  
+                    <!--							<div class="">-->
+                    <!--								<div class="ui mini pagination menu" th:if="${page.totalPages}>1">-->
+                    <!--									<a class="item" onclick="page(this)" th:attr="data-page=${page.number}-1"-->
+                    <!--									   th:unless="${page.first}">上一页</a>-->
+                    <!--									<a class="item" onclick="page(this)" th:attr="data-page=${page.number}+1"-->
+                    <!--									   th:unless="${page.last}">下一页</a>-->
+                    <!--								</div>-->
+                    <!--							</div>-->
                     <br>
                     <div class="" th:if="${page.totalPages}>1">
                         <div class="ui mini pagination menu">
