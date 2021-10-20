@@ -170,6 +170,6 @@ CREATE TABLE `t_user`  (
 -- ----------------------------
 -- Records of t_user
 -- ----------------------------
-INSERT INTO `t_user` VALUES (1, 'https://consonblog-1257792125.cos.ap-chengdu.myqcloud.com/%E5%8D%9A%E5%AE%A2%E8%83%8C%E6%99%AF/%E6%A0%87%E7%AD%BE.jpg', '2020-03-31 00:00:00.000000', '康森', 'c2d5698d51a19d8a121ce581499d7b701668', 1, '2020-03-31 00:00:00.000000', 'conson');
+INSERT INTO `t_user` VALUES (1, 'https://consonblog-1257792125.cos.ap-chengdu.myqcloud.com/%E5%8D%9A%E5%AE%A2%E8%83%8C%E6%99%AF/%E6%A0%87%E7%AD%BE.jpg', '2020-03-31 00:00:00.000000', '康森', 'c2d5202cb962ac59175b964b17152d234b70', 1, '2020-03-31 00:00:00.000000', 'conson');
 
 SET FOREIGN_KEY_CHECKS = 1;
