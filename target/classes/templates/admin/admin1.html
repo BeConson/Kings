@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>后台管理</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+		<link rel="stylesheet" href="../../static/css/conson.css" />
+		<link rel="stylesheet" href="../../static/lib/editormd/css/editormd.min.css"/>
+	</head>
+
+	<body class="body">
+
+		<!--导航-->
+		<nav class="ui inverted attached segment m-padded-tb-mini " style="opacity:0.8">
+			<div class="ui container">
+				<div class="ui inverted secondary stackable menu">
+					<h2 class="ui orange header item">后台管理系统</h2>
+					<a href="#" class="m-item item right m-mobile-hide"><i class="home icon"></i>&nbsp;首页</a>
+					<a href="#" class="m-item item m-mobile-hide"><i class="idea icon"></i>&nbsp;全部资讯</a>
+					<a href="#" class="m-item item m-mobile-hide"><i class="tags icon"></i>&nbsp;全部英雄</a>
+					<a href="#" class="m-item item m-mobile-hide"><i class="game icon"></i>&nbsp;游戏介绍</a>
+					<div class="menu">
+						<div class="ui dropdown item">
+							<div class="text">
+								<img src="../../static/img/头像.jpg" alt="" class="ui avatar image">
+								康森
+							</div>
+							<i class="dropdown icon"></i>
+							<div class="menu ">
+								<a href="" class="item ">登入</a>
+								<a href="" class="item ">退出</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
+				<i class="sidebar icon"></i>
+			</a>
+		</nav><br>
+
+		<!-- 详情内容 -->
+		<div class="m-container m-padded-tb-big">
+			<div class="ui container ">
+
+				<!-- 二级菜单 -->
+				<div class="ui segment">
+					<div id="context2">
+						<div class="ui secondary pointing menu">
+							<a class="item" data-tab="fourth">发布</a>
+							<a class="item" data-tab="fifth">列表</a>
+
+						</div>
+
+						<!-- 发布 -->
+						<div class="ui active tab segment" data-tab="fourth">
+							<form action="#" method="post" class="ui form">
+								
+								<div class=" required field">
+									<div class="ui left labeled input">
+										
+											<input type="text" name="title" placeholder="标题">
+									</div>
+								</div>
+								
+								<div class="field">
+									<div id="md-content" style="z-index: 5 !important;">
+										<textarea name="content" placeholder="资讯内容" style="display: none;"></textarea>
+									</div>
+								</div>
+								
+								<div class="three fields">
+									<div class="field">
+										<div class="ui left labeled action input">
+											<label class="ui compact label">资讯性质</label>
+											<div class="ui fluid selection dropdown">
+												<input type="hidden">
+												<i class="dropdown icon"></i>
+												<div class="default text">转载</div>
+												<div class="menu">
+													<div class="item" data-value="转载">转载</div>
+													<div class="item" data-value="转载">原创</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="field">
+										<div class="ui left labeled action input">
+											<label class="ui compact label">英雄属性</label>
+											<div class="ui fluid selection dropdown">
+												<input type="hidden">
+												<i class="dropdown icon"></i>
+												<div class="default text">战士</div>
+												<div class="menu">
+													<div class="item" data-value="战士">战士</div>
+													<div class="item" data-value="辅助">辅助</div>
+													<div class="item" data-value="法师">法师</div>
+													<div class="item" data-value="射手">射手</div>
+													<div class="item" data-value="法师">坦克</div>
+													<div class="item" data-value="刺客">刺客</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="field">
+										<div class="ui left labeled action input">
+											<label class="ui compact label">相关标签</label>
+											<div class="ui fluid selection multiple search dropdown">
+												<input type="hidden" name="tag">
+												<i class="dropdown icon"></i>
+												<div class="default text">阿珂</div>
+												<div class="menu">
+													<div class="item" data-value="射手">后裔</div>
+													<div class="item" data-value="刺客">阿珂</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+								<div class="field">
+									<div class="ui left labeled input">
+										<label for="" class="ui label">图片地址</label>
+										<input type="text" name="indexPicture" placeholder="图片引用地址"/>
+									</div>
+								</div>
+								
+								<div class="inline fields">
+									<div class="field">
+										<div class="ui toggle checkbox">
+										      <input type="checkbox" id="recommend" name="recommend" checked="checked" tabindex="0" class="hidden">
+										      <label for="recommend">推荐</label>
+										</div>
+									</div>
+									<div class="field">
+										<div class="ui toggle checkbox">
+										      <input type="checkbox" id="shareInfo" name="shareInfo" tabindex="0" class="hidden">
+										      <label for="shareInfo">转载声明</label>
+										</div>
+									</div>
+									<div class="field">
+										<div class="ui toggle checkbox">
+										      <input type="checkbox" id="recommend" name="recommend" tabindex="0" class="hidden">
+										      <label for="recommend">评论</label>
+										</div>
+									</div>			
+								</div>
+								
+								<div class="ui error message"></div>
+								
+								<div class="ui right aligned container">
+									<button type="button" class="ui button" onclick="window.history.go(-1)">返回</button>
+									<button class="ui secondary button">保存</button>
+									<button class="ui teal button">发布</button>
+								</div>
+								
+								
+							</form>
+						</div>
+
+						<div class="ui tab segment" data-tab="fifth">
+							5
+						</div>	
+					</div>
+				</div>
+
+
+				<form action="#" method="post" class="ui segment form">
+					<div class="inline fields">
+						<div class="field">
+							<input type="text" name="title" placeholder="标题" />
+						</div>
+						<div class="field">
+							<div class="ui selection dropdown">
+								<input type="hidden" name="type">
+								<i class="dropdown icon"></i>
+								<div class="default text">分类</div>
+								<div class="menu">
+									<div class="item" data-value="1">前端学习</div>
+									<div class="item" data-value="2">后端学习</div>
+								</div>
+							</div>
+						</div>
+						<div class="field"><br>
+							<div class="ui checkbox">
+								<input type="checkbox" id="recommend" name="recommend">
+								<label for="recommend">推荐</label>
+							</div>
+						</div>
+						<div class="field"><br>
+							<button class="ui orange basic button"><i class="search icon"></i>搜索</button>
+						</div>
+					</div>
+				</form>
+
+				<div class="ui segment">
+					<table class="ui compact celled definition table">
+						<thead>
+							<tr>
+								<th></th>
+								<th>标题</th>
+								<th>类型</th>
+								<th>推荐</th>
+								<th>更新时间</th>
+								<th>操作</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="collapsing">
+									<div class="ui fitted slider checkbox">
+										<input type="checkbox"> <label></label>
+									</div>
+								</td>
+								<td>露娜的故事</td>
+								<td>资讯</td>
+								<td>是</td>
+								<td>2020-3-25 18:16:38</td>
+								<td>
+									<a href="#" class="ui mini green button">编辑</a>
+								</td>
+							</tr>
+							<tr>
+								<td class="collapsing">
+									<div class="ui fitted slider checkbox">
+										<input type="checkbox"> <label></label>
+									</div>
+								</td>
+								<td>露娜的故事</td>
+								<td>资讯</td>
+								<td>是</td>
+								<td>2020-3-25 18:16:38</td>
+								<td>
+									<a href="#" class="ui mini green button">编辑</a>
+								</td>
+							</tr>
+							<tr>
+								<td class="collapsing">
+									<div class="ui fitted slider checkbox">
+										<input type="checkbox"> <label></label>
+									</div>
+								</td>
+								<td>露娜的故事</td>
+								<td>资讯</td>
+								<td>是</td>
+								<td>2020-3-25 18:16:38</td>
+								<td>
+									<a href="#" class="ui mini green button">编辑</a>
+								</td>
+							</tr>
+							<tr>
+								<td class="collapsing">
+									<div class="ui fitted slider checkbox">
+										<input type="checkbox"> <label></label>
+									</div>
+								</td>
+								<td>露娜的故事</td>
+								<td>资讯</td>
+								<td>是</td>
+								<td>2020-3-25 18:16:38</td>
+								<td>
+									<a href="#" class="ui mini green button">编辑</a>
+								</td>
+							</tr>
+							<tr>
+								<td class="collapsing">
+									<div class="ui fitted slider checkbox">
+										<input type="checkbox"> <label></label>
+									</div>
+								</td>
+								<td>露娜的故事</td>
+								<td>资讯</td>
+								<td>是</td>
+								<td>2020-3-25 18:16:38</td>
+								<td>
+									<a href="#" class="ui mini green button">编辑</a>
+								</td>
+							</tr>
+						</tbody>
+						<tfoot class="full-width">
+							<tr>
+								<th></th>
+								<th colspan="6">
+									<div class="ui small red basic button">
+										删除
+									</div>
+									<div class="ui small green basic button">
+										新增
+									</div>
+
+									<div class="ui right floated buttons">
+										<button class="ui button"><a href="#">上一页</a></button>
+										<div class="or"></div>
+										<button class="ui button"><a href="#">下一页</a></button>
+									</div>
+
+								</th>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
+
+			</div>
+		</div>
+
+
+		<!-- 底部 -->
+		<footer class="ui inverted attached segment fooder-opacity" style="opacity:0.9">
+			<div class="ui center aligned container">
+				<div class="ui inverted divided stackable grid">
+					<div class="three wide column">
+						<div class="ui inverted link list">
+							<div class="item">
+								<img src="../../static/img/微信.jpg" class="ui rounded image" style="width: 100px;">
+							</div>
+						</div>
+
+					</div>
+					<div class="three wide column">
+						<h4 class="m-text-spaced m-opacity-mini">站长博客</h4>
+						<div class="inverted link list">
+							<a href="http://www.conson.club" target="_blank">www.conson.club</a><br>
+						</div>
+					</div>
+					<div class="three wide column">
+						<h4 class="m-text-spaced m-opacity-mini">联系方式</h4>
+						<div class="inverted link list">
+							<a class="item">Email: csonc@qq.com</a><br>
+							<a class="item">QQ: 1070068529</a><br>
+						</div>
+					</div>
+					<div class="seven wide column">
+						<h4 class="m-text-spaced m-opacity-mini">小站说明</h4>
+						<a>&nbsp;&nbsp;欢迎来到王者小站，这里为您提供一些网络资讯，增添游戏乐趣！</a>
+					</div>
+				</div>
+				<div class="ui inverted section divider"></div>
+				<p class="m-text-spaced m-opacity-mini">本项目完成于</p>
+			</div>
+		</footer>
+
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+		<script src="../../static/lib/editormd/editormd.min.js"></script>
+		<script>
+			
+			// markdown编辑器初始化
+			testEditor = editormd({
+			    id      : "md-content",
+			    width   : "100%",
+			    height  : 640,
+			    path    : "../../static/lib/editormd/lib/"
+			});
+			
+			$('.menu.toggle').click(function() {
+				$('.m-item').toggleClass('m-mobile-hide');
+			});
+
+			$('.ui.dropdown')
+				.dropdown();
+				
+			$('#context2 .menu .item')
+				.tab({
+					// special keyword works same as above
+					context: 'parent'
+				});
+				
+			$('.ui.checkbox')
+			  .checkbox()
+			;
+			
+			$('.ui.form').form({
+				fields : {
+					title : {
+						identifier : 'title',
+						rules : [{
+							type : 'empty',
+							prompt : '标题 : 请输入资讯标题'
+						}]
+					}
+				}
+			});
+		</script>
+
+	</body>
+</html>

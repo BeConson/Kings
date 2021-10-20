@@ -1,42 +1,68 @@
-2020-04-20 19:09:02.562  INFO 14268 --- [main] com.coco.kings.KingsApplicationTests     : Starting KingsApplicationTests on LAPTOP-N85V2QDD with PID 14268 (started by 康森 in D:\A1-idea项目\kings)
-2020-04-20 19:09:02.573 DEBUG 14268 --- [main] com.coco.kings.KingsApplicationTests     : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-2020-04-20 19:09:02.573  INFO 14268 --- [main] com.coco.kings.KingsApplicationTests     : The following profiles are active: dev
-2020-04-20 19:09:03.820  INFO 14268 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2020-04-20 19:09:04.858  INFO 14268 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1007ms. Found 4 JPA repository interfaces.
-2020-04-20 19:09:06.565  INFO 14268 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-04-20 19:09:06.770  INFO 14268 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
-2020-04-20 19:09:07.040  INFO 14268 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-04-20 19:09:08.331  INFO 14268 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-04-20 19:09:10.010  INFO 14268 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-04-20 19:09:10.049  INFO 14268 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
-2020-04-20 19:09:12.294  INFO 14268 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-04-20 19:09:12.308  INFO 14268 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-04-20 19:09:14.723  WARN 14268 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-04-20 19:09:15.816  INFO 14268 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-04-20 19:09:16.858  INFO 14268 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-04-20 19:09:17.974  INFO 14268 --- [main] com.coco.kings.KingsApplicationTests     : Started KingsApplicationTests in 16.161 seconds (JVM running for 17.823)
-2020-04-20 19:09:18.213  INFO 14268 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-04-20 19:09:18.216  INFO 14268 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2020-04-20 19:09:18.221  INFO 14268 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2020-04-20 19:09:18.238  INFO 14268 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2020-04-20 19:14:52.314  INFO 19976 --- [main] com.coco.kings.KingsApplicationTests     : Starting KingsApplicationTests on LAPTOP-N85V2QDD with PID 19976 (started by 康森 in D:\A1-idea项目\kings)
-2020-04-20 19:14:52.317 DEBUG 19976 --- [main] com.coco.kings.KingsApplicationTests     : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-2020-04-20 19:14:52.317  INFO 19976 --- [main] com.coco.kings.KingsApplicationTests     : The following profiles are active: dev
-2020-04-20 19:14:53.581  INFO 19976 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2020-04-20 19:14:53.839  INFO 19976 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 230ms. Found 4 JPA repository interfaces.
-2020-04-20 19:14:55.449  INFO 19976 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-04-20 19:14:55.623  INFO 19976 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
-2020-04-20 19:14:55.904  INFO 19976 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-04-20 19:14:57.589  INFO 19976 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-04-20 19:14:59.617  INFO 19976 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-04-20 19:14:59.687  INFO 19976 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
-2020-04-20 19:15:02.449  INFO 19976 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-04-20 19:15:02.470  INFO 19976 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-04-20 19:15:06.735  WARN 19976 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-04-20 19:15:07.803  INFO 19976 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-04-20 19:15:08.191  INFO 19976 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-04-20 19:15:09.018  INFO 19976 --- [main] com.coco.kings.KingsApplicationTests     : Started KingsApplicationTests in 17.406 seconds (JVM running for 19.191)
-2020-04-20 19:15:09.434  INFO 19976 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-04-20 19:15:09.437  INFO 19976 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2020-04-20 19:15:09.457  INFO 19976 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2020-04-20 19:15:09.488  INFO 19976 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-20 17:34:09.527  INFO 18460 --- [restartedMain] com.coco.kings.KingsApplication          : Starting KingsApplication on LAPTOP-ITUOVTOH with PID 18460 (D:\A-GitHub\A-Conson-Project\Kings\target\classes started by kangs in D:\A-GitHub\A-Conson-Project\Kings)
+2021-10-20 17:34:09.540 DEBUG 18460 --- [restartedMain] com.coco.kings.KingsApplication          : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2021-10-20 17:34:09.541  INFO 18460 --- [restartedMain] com.coco.kings.KingsApplication          : The following profiles are active: dev
+2021-10-20 17:34:09.660  INFO 18460 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in D:\A-Java-About-App\A-2-apache-maven-3.6.1\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/D:/A-Java-About-App/A-2-apache-maven-3.6.1/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/D:/A-Java-About-App/A-2-apache-maven-3.6.1/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/D:/A-Java-About-App/A-2-apache-maven-3.6.1/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/D:/A-Java-About-App/A-2-apache-maven-3.6.1/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/D:/A-Java-About-App/A-2-apache-maven-3.6.1/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/D:/A-Java-About-App/A-2-apache-maven-3.6.1/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2021-10-20 17:34:09.661  INFO 18460 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-10-20 17:34:09.662  INFO 18460 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-10-20 17:34:11.623  INFO 18460 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-10-20 17:34:11.898  INFO 18460 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 218ms. Found 4 JPA repository interfaces.
+2021-10-20 17:34:13.895  INFO 18460 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8849 (http)
+2021-10-20 17:34:13.910  INFO 18460 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-10-20 17:34:13.911  INFO 18460 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2021-10-20 17:34:14.049  INFO 18460 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-10-20 17:34:14.050  INFO 18460 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4388 ms
+2021-10-20 17:34:14.450  INFO 18460 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-20 17:34:14.588  INFO 18460 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2021-10-20 17:34:14.887  INFO 18460 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-10-20 17:34:15.090  INFO 18460 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-20 17:34:15.092  WARN 18460 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2021-10-20 17:34:15.374  INFO 18460 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-20 17:34:15.403  INFO 18460 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2021-10-20 17:34:18.663  INFO 18460 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-20 17:34:18.684  INFO 18460 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-10-20 17:34:18.851  INFO 18460 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-10-20 17:34:20.329  WARN 18460 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-10-20 17:34:20.700  INFO 18460 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-10-20 17:34:20.897  INFO 18460 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-10-20 17:34:21.481  INFO 18460 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8849 (http) with context path ''
+2021-10-20 17:34:21.486  INFO 18460 --- [restartedMain] com.coco.kings.KingsApplication          : Started KingsApplication in 13.531 seconds (JVM running for 16.112)
+2021-10-20 17:35:47.792  INFO 18460 --- [http-nio-8849-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-20 17:35:47.793  INFO 18460 --- [http-nio-8849-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-10-20 17:35:47.814  INFO 18460 --- [http-nio-8849-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 20 ms
+2021-10-20 17:35:47.863  INFO 18460 --- [http-nio-8849-exec-1] com.coco.kings.Aspect.LogAspect          : Request : {url='http://localhost:8849/', ip='0:0:0:0:0:0:0:1', classMethod='com.coco.kings.web.IndexController.index', args=[Page request [number: 0, size 6, sort: updateTime: DESC], {}]} 
+2021-10-20 17:35:48.079  WARN 18460 --- [http-nio-8849-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.kings.size]; use collection function syntax instead [size(t.kings)].
+2021-10-20 17:35:48.110  WARN 18460 --- [http-nio-8849-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.kings.size]; use collection function syntax instead [size(t.kings)].
+2021-10-20 17:35:48.130  INFO 18460 --- [http-nio-8849-exec-1] com.coco.kings.Aspect.LogAspect          : ----------doAfter----------
+2021-10-20 17:35:48.131  INFO 18460 --- [http-nio-8849-exec-1] com.coco.kings.Aspect.LogAspect          : ----------doAfter----------
+2021-10-20 17:35:48.131  INFO 18460 --- [http-nio-8849-exec-1] com.coco.kings.Aspect.LogAspect          : Result : index
+2021-10-20 17:39:18.905  INFO 18460 --- [Thread-21] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-10-20 17:39:18.908  INFO 18460 --- [Thread-21] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-10-20 17:39:18.916  INFO 18460 --- [Thread-21] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-20 17:39:18.938  INFO 18460 --- [Thread-21] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-20 17:39:19.806  INFO 18460 --- [restartedMain] com.coco.kings.KingsApplication          : Starting KingsApplication on LAPTOP-ITUOVTOH with PID 18460 (D:\A-GitHub\A-Conson-Project\Kings\target\classes started by kangs in D:\A-GitHub\A-Conson-Project\Kings)
+2021-10-20 17:39:19.807 DEBUG 18460 --- [restartedMain] com.coco.kings.KingsApplication          : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2021-10-20 17:39:19.807  INFO 18460 --- [restartedMain] com.coco.kings.KingsApplication          : The following profiles are active: dev
+2021-10-20 17:39:20.196  INFO 18460 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-10-20 17:39:20.233  INFO 18460 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37ms. Found 4 JPA repository interfaces.
+2021-10-20 17:39:20.659  INFO 18460 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8849 (http)
+2021-10-20 17:39:20.660  INFO 18460 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-10-20 17:39:20.661  INFO 18460 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2021-10-20 17:39:20.687  INFO 18460 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-10-20 17:39:20.688  INFO 18460 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 876 ms
+2021-10-20 17:39:20.822  INFO 18460 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-20 17:39:20.833  INFO 18460 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2021-10-20 17:39:20.834  WARN 18460 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2021-10-20 17:39:20.864  INFO 18460 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2021-10-20 17:39:20.865  INFO 18460 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2021-10-20 17:39:21.184  INFO 18460 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-20 17:39:21.185  INFO 18460 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-10-20 17:39:21.250  INFO 18460 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-10-20 17:39:21.798  WARN 18460 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-10-20 17:39:22.012  INFO 18460 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-10-20 17:39:22.084  INFO 18460 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-10-20 17:39:22.516  INFO 18460 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8849 (http) with context path ''
+2021-10-20 17:39:22.517  INFO 18460 --- [restartedMain] com.coco.kings.KingsApplication          : Started KingsApplication in 2.764 seconds (JVM running for 317.143)
+2021-10-20 17:39:22.519  INFO 18460 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-10-20 17:39:48.165  INFO 18460 --- [http-nio-8849-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-20 17:39:48.167  INFO 18460 --- [http-nio-8849-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-10-20 17:39:48.196  INFO 18460 --- [http-nio-8849-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 29 ms

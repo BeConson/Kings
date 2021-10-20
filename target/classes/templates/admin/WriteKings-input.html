@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>后台管理</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="../../static/css/conson.css" th:href="@{/css/conson.css}">
+    <link rel="stylesheet" href="../../static/lib/editormd/css/editormd.min.css"
+          th:href="@{/lib/editormd/css/editormd.min.css}"/>
+</head>
+
+<body class="body animated pulse">
+
+<!-- 导航 -->
+<nav th:replace="admin/_PublicTemplate :: nav"></nav>
+<br><br>
+
+<!-- 详情内容 -->
+<div class=" m-container m-padded-tb-big ">
+    <div class="ui container ">
+        <div class="ui buttons">
+            <button class="ui button"><a th:href="@{/kings/kings}" href="#" style="color: cadetblue">返回后台</a></button>
+            <button class="ui button"><a th:href="@{/kings/WriteKings}" href="#" style="color: cadetblue">全部资讯</a>
+            </button>
+        </div>
+        <!-- 二级菜单 -->
+        <div class="ui segment ">
+            <div id="context2">
+                <div class="ui secondary pointing menu">
+                    <a class="item active" data-tab="fourth">发布</a>
+                </div>
+
+                <!-- 发布 -->
+                <div class="ui active tab segment" data-tab="fourth">
+                    <form id="kingsIn-form" action="#" th:object="${kings}" th:action="@{/kings/WriteKings}" method="post" class="ui form">
+						<input type="hidden" name="published">
+						<input type="hidden" name="id" th:value="*{id}">
+                        <div class="required field">
+                            <div class="ui left labeled input">
+                                <label class="ui label">标题</label>
+                                <input type="text" name="title" placeholder="标题" maxlength="15" th:value="*{title}">
+                            </div>
+                        </div>
+
+                        <div class="required field">
+                                <textarea th:text="*{description}" name="description" placeholder="资讯摘要(20字以内哦)" maxlength="20" >Hello, I'm conson, You can Share your idea happily.</textarea>
+                        </div>
+
+                        <div class="required field">
+                            <div id="md-content" style="z-index: 5 !important;">
+                                <textarea th:text="*{content}" name="content" placeholder="资讯内容" style="display: none;">Hello, I'm conson, You can Share your idea happily.</textarea>
+                            </div>
+                        </div>
+
+                        <div class="two fields">
+
+                            <div class="field">
+                                <div class="ui left labeled action input">
+                                    <label class="ui compact label">分类</label>
+                                    <div class="ui fluid selection dropdown">
+                                        <input type="hidden" name="type.id" th:value="*{type} !=null ? *{type.id}">
+                                        <i class="dropdown icon"></i>
+                                        <div class="default text">分类</div>
+                                        <div class="menu">
+											<div class="item" th:each="type : ${types}" th:data-value="${type.id}" th:text="${type.name}" data-value="1">前端学习</div>
+                                            <!--<div class="item" data-value="1">战士</div>-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="required field">
+                                <div class="ui left labeled action input">
+                                    <label class="ui compact label">标签</label>
+                                    <div class="ui fluid selection multiple search dropdown">
+                                        <input type="hidden" name="tagIds" th:value="*{tagIds}">
+                                        <i class="dropdown icon"></i>
+                                        <div class="default text">标签</div>
+                                        <div class="menu">
+											<div class="item" th:each="tag : ${tags}" th:data-value="${tag.id}" th:text="${tag.name}" data-value="1">前端学习</div>
+                                            <!--<div class="item" data-value="刺客">阿珂</div>-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="required field">
+                            <div class="ui left labeled input">
+                                <label class="ui label">首页图片</label>
+                                <input  th:value="*{picture}" type="text" name="picture" placeholder="首页图片引用地址"/>
+                            </div>
+                        </div>
+
+                        <div class="required field">
+                            <div class="ui left labeled input">
+                                <label class="ui label">英雄图片</label>
+                                <input  th:value="*{heroesPicture}" type="text" name="heroesPicture" placeholder="英雄图片引用地址"/>
+                            </div>
+                        </div>
+
+                        <div class="inline fields">
+                            <div class="field">
+                                <div class="ui toggle checkbox">
+                                    <input th:checked="*{recommend}" type="checkbox" id="recommend" name="recommend" checked="checked"
+                                           tabindex="0" class="hidden">
+                                    <label for="recommend">推荐</label>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="ui toggle checkbox">
+                                    <input  th:checked="*{speakContent}" type="checkbox" id="speakContent" name="speakContent" tabindex="0" class="hidden">
+                                    <label for="speakContent">评论</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ui error message"></div>
+
+
+                        <div class="ui right aligned container">
+                            <button type="button" class="ui button" onclick="window.history.go(-1)">返回</button>
+                            <button type="button" id="save-btn" class="ui teal button">保存</button>
+                            <button type="button" id="published-btn" class="ui green button">发布</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- 底部 -->
+<footer th:replace="admin/_PublicTemplate :: footer"></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+<script src="../../static/lib/editormd/editormd.min.js" th:src="@{/lib/editormd/editormd.min.js}"></script>
+<script>
+    // markdown编辑器初始化
+    testEditor = editormd({
+        id: "md-content",
+        width: "100%",
+        height: 640,
+        path: "/lib/editormd/lib/"
+    });
+
+	$('#save-btn').click(function () {
+		$('[name="published"]').val(false);
+		$('#kingsIn-form').submit();
+	});
+
+	$('#published-btn').click(function () {
+		$('[name="published"]').val(true);
+		$('#kingsIn-form').submit();
+	});
+
+    $('.menu.toggle').click(function () {
+        $('.m-item').toggleClass('m-mobile-hide');
+    });
+
+    $('.ui.dropdown')
+        .dropdown();
+
+    $('#context2 .menu .item')
+        .tab({
+            // special keyword works same as above
+            context: 'parent'
+        });
+
+    $('.ui.checkbox')
+        .checkbox()
+    ;
+
+    $('.ui.form').form({
+        fields: {
+            title: {
+                identifier: 'title',
+                rules: [{
+                    type: 'empty',
+                    prompt: '标题 : 需要输入资讯标题哦'
+                }]
+            },
+            description: {
+                identifier: 'description',
+                rules: [{
+                    type: 'empty',
+                    prompt: '摘要 : 资讯摘要也要填写呀'
+                }]
+            },
+			content: {
+				identifier: 'content',
+				rules: [{
+					type: 'empty',
+					prompt: '内容 : 重要的内容去哪里啦'
+				}]
+			},
+			typeId: {
+				identifier: 'typeId',
+				rules: [{
+					type: 'empty',
+					prompt: '分类 : 需要输入正确分类哦'
+				}]
+			},
+			picture: {
+				identifier: 'picture',
+				rules: [{
+					type: 'empty',
+					prompt: '图片 : 请问你的图片资源呢'
+				}]
+			},
+            heroesPicture: {
+                identifier: 'heroesPicture',
+                rules: [{
+                    type: 'empty',
+                    prompt: '图片 : 请问你的图片资源呢'
+                }]
+            }
+        }
+    });
+</script>
+
+</body>
+</html>

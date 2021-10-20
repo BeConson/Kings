@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="zh" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>登入</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+	<link rel="stylesheet" type="text/css" href="../../static/css/Login_default.css" th:href="@{../css/Login_default.css}">
+	<link rel="stylesheet" type="text/css" href="../../static/css/Login_styles.css"  th:href="@{../css/Login_styles.css}">
+<!--	<script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>-->
+	<!--[if IE]>
+	<![endif]-->
+</head>
+
+<div style="text-align: center;padding-top:210px;color: gray" class="animated bounceInDown" th:unless="${#strings.isEmpty(message)}" th:text="${message}">用户名密码错误哦</div>
+
+<body>
+
+		<div class='login'>
+			<div class='login_title animated bounceInLeft'>
+	    <span>账户登录</span>
+	  	</div>
+
+			<form action="#" method="post" th:action="@{/kings/login}">
+		  		<div class='login_fields'>
+					<div class='login_fields__user'>
+					  <div class='icon'>
+						<img th:src="@{/img/user_icon_copy.png}" src='../../static/img/user_icon_copy.png'>
+					  </div>
+
+					  <input class="" name="username" placeholder='用户名' type='text'>
+						<div class='validation'>
+						  <img th:src="@{/img/tick.png}" src='../../static/img/tick.png'>
+						</div>
+					  </input>
+					</div>
+					<div class='login_fields__password'>
+					  <div class='icon'>
+						<img th:src="@{/img/lock_icon_copy.png}" src='../../static/img/lock_icon_copy.png'>
+					  </div>
+					  <input name="password" placeholder='密码' type='password'>
+					  <div class='validation'>
+						<img th:src="@{/img/tick.png}" src='../../static/img/tick.png'>
+					  </div>
+					</div>
+					  <div class='login_fields__submit'>
+						<input class=" animated pulse" type='submit' value='登录'>
+						<div class='forgot animated bounceInRight'>
+						  <a href='#'>I'm Conson, Welcome !</a>
+						</div>
+					</div>
+		 		 </div>
+			</form>
+
+		 	<div class='success'>
+			<h2>认证成功</h2>
+			<p>欢迎回来 , 快分享你的idea吧</p>
+		  </div>
+
+		  	<div class='disclaimer animated bounceInUp'>
+<!--			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce semper laoreet placerat. Nullam semper auctor justo, rutrum posuere odio vulputate nec.</p>-->
+			<p>Before the phantom of False morning died, 
+				Methought a Voice within the Tavern cried, 
+				"When all the Temple is prepared within, 
+				Why nods the drowsy Worshipper outside?"<br>
+				&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+				&emsp;&emsp;————Omar Khayyam
+			</p>
+<!--			<p style="padding-left: 50px"> 北风啸繁街，乌鹊落宫绝。<br>-->
+<!--				皓彩洒人间，九州民尽借。<br>-->
+<!--				独倚空天门，对影显岁痕。<br>-->
+<!--				敛眸轻叹纹，却静心无神。<br>-->
+<!--				&emsp;&emsp;&emsp;&emsp;&emsp;-->
+<!--				&emsp;&emsp;&emsp;&emsp;&emsp;——康森-->
+<!--			</p>-->
+		  </div>
+		</div>
+
+		<div class='authent'>
+		  <img th:src="@{/img/puff.svg}" src='../../static/img/puff.svg'>
+		  <p>认证中...</p>
+		</div>
+
+	<script type="text/javascript" src="../../static/js/Login_stopExecutionOnTimeout.js?t=1" th:src="@{../js/Login_stopExecutionOnTimeout.js?t=1}"></script>
+	<script type="text/javascript" src="../../static/js/Login_jquery-2.1.1.min.js" th:src="@{../js/Login_jquery-2.1.1.min.js}"></script>
+	<script type="text/javascript" src="../../static/js/Login_jquery-ui.min.js" th:src="@{../js/Login_jquery-ui.min.js}"></script>
+	<script>
+
+	$('input[type="submit"]').click(function () {
+	    $('.login').addClass('test');
+	    setTimeout(function () {
+	        $('.login').addClass('testtwo');
+	    }, 300);
+	    setTimeout(function () {
+	        $('.authent').show().animate({ right: -320 }, {
+	            easing: 'easeOutQuint',
+	            duration: 600,
+	            queue: false
+	        });
+	        $('.authent').animate({ opacity: 1 }, {
+	            duration: 200,
+	            queue: false
+	        }).addClass('visible');
+	    }, 500);
+	    setTimeout(function () {
+	        $('.authent').show().animate({ right: 90 }, {
+	            easing: 'easeOutQuint',
+	            duration: 600,
+	            queue: false
+	        });
+	        $('.authent').animate({ opacity: 0 }, {
+	            duration: 200,
+	            queue: false
+	        }).addClass('visible');
+	        $('.login').removeClass('testtwo');
+	    }, 2500);
+	    setTimeout(function () {
+	        $('.login').removeClass('test');
+	        $('.login div').fadeOut(123);
+	    }, 2800);
+	    setTimeout(function () {
+	        $('.success').fadeIn();
+	    }, 3200);
+	});
+	$('input[type="text"],input[type="password"]').focus(function () {
+	    $(this).prev().animate({ 'opacity': '1' }, 200);
+	});
+	$('input[type="text"],input[type="password"]').blur(function () {
+	    $(this).prev().animate({ 'opacity': '.5' }, 200);
+	});
+	$('input[type="text"],input[type="password"]').keyup(function () {
+	    if (!$(this).val() == '') {
+	        $(this).next().animate({
+	            'opacity': '1',
+	            'right': '30'
+	        }, 200);
+	    } else {
+	        $(this).next().animate({
+	            'opacity': '0',
+	            'right': '20'
+	        }, 200);
+	    }
+	});
+	var open = 0;
+	$('.tab').click(function () {
+	    $(this).fadeOut(200, function () {
+	        $(this).parent().animate({ 'left': '0' });
+	    });
+	});
+
+	</script>
+</body>
+</html>

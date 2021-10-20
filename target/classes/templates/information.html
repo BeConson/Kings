@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html xmlns:th="">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>资讯详情</title>
+    <link rel="stylesheet" href="../static/css/conson.css" th:href="@{/css/conson.css}"/>
+    <link rel="stylesheet" href="../static/css/typo.css" th:href="@{/css/typo.css}"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="../static/lib/prism/prism.css" th:href="@{/lib/prism/prism.css}"/>
+    <link rel="stylesheet" href="../static/lib/tocbot/tocbot.css" th:href="@{/lib/tocbot/tocbot.css}"/>
+</head>
+
+<body class="body">
+
+<!--导航-->
+<nav th:replace="PublicTemplate :: menu"></nav>
+
+<!-- PC端样式 固定按钮 目录、评论、阅读、返回顶部 -->
+<div class="m-fixed m-padded-big m-right-bottom m-mobile-hide">
+    <div class="ui vertical icon buttons m-padded-big m-right-bottom">
+        <button class="ui button toc"><i class="align right icon"></i> 目录</button>
+        <div id="toTop-buttom" class="ui button"><i class="arrow circle up icon"></i></div>
+        <div id="speak-buttom" class="ui button"><i class="arrow circle down icon"></i></div>
+    </div>
+</div>
+
+<!-- 目录生成 -->
+<div class="ui toc-container flowing popup transition hidden" style="width: 250px;">
+    <ol class="js-toc">
+
+    </ol>
+</div>
+
+<!-- 手机端样式 固定按钮 目录、评论、阅读、返回顶部 -->
+<div class="m-fixed m-padded-big m-right-bottom m-mobile-show">
+    <div class="ui vertical icon buttons m-padded-big m-right-bottom">
+        <button class="ui button toc"><i class="align right icon"></i></button>
+        <div id="mobile-toTop-buttom" class="ui button"><i class="arrow circle up icon"></i></div>
+        <div id="mobile-speak-buttom" class="ui button"><i class="arrow circle down icon"></i></div>
+    </div>
+</div>
+
+<!-- 目录生成 -->
+<div class="ui toc-container flowing popup transition hidden" style="width: 250px;">
+    <ol class="js-toc">
+
+    </ol>
+</div>
+
+<div class="animated bounceInLeft">
+    <!-- 详情内容 -->
+    <div class="m-container m-padded-tb-big">
+        <div class="ui container">
+            <!-- rounded -->
+            <!-- 第一栏标题区 -->
+            <div class="ui top attached orange segment">
+                <div class="ui horizontal link list">
+                    <div class="item">
+                        <img th:src="@{${kings.user.avatar}}" src="../static/img/头像.jpg" class="ui avatar image">
+                    </div>
+                    <div class="item">
+                        <i class="calendar icon"></i><span th:text="${#dates.format(kings.updateTime,'yyyy-MM-dd')}">2020-3-30</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 第二栏图片区 -->
+            <div class="ui attached segment">
+                <br>
+                <img th:src="@{${kings.picture}}" src="../static/img/wz8.jpg" alt="" class="ui fluid rounded image m-box-shadow-big ">
+                <br>
+            </div>
+            <br><br>
+
+            <!-- 第三栏内容区 -->
+            <!-- <h2 class="ui center aligned header">改版后的露娜</h2><br> -->
+            <div id="content" class="">
+                <div class="column">
+                    <div class="ui raised segment"><br>
+                        <div th:each="tag : ${kings.tags}">
+                            <a class="ui blue ribbon label" th:text="${tag.name}"><p></p>露娜</a>
+                            <p></p>&emsp;
+                        </div>
+
+                        <h2 style="font-weight: 500;" class="ui center aligned header" th:text="${kings.title}">
+                            傻猪猪</h2>
+                        <br>
+
+                        <div class="m-padded-lr typo typo-selection js-toc-content" th:utext="${kings.content}">
+
+                        </div>
+                        <br><br><br><br>
+
+                        <div class="m-padded-lr-big">
+                            <div class="ui rounded yellow segment m-padded-lr">
+                                <div class="ui grid">
+                                    <div class="column">
+                                        <ui class="list"></ui>
+                                        <li>发表时间：<span
+                                                th:text="${#dates.format(kings.updateTime,'yyyy-MM-dd HH:mm:ss')}">2020-3-30</span>
+                                        </li>
+                                        <!--  <li>信息来源：</li>-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br><br><br>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+
+        </div>
+    </div>
+</div>
+
+<!-- 点击弹出式的固定按钮（目录、评论、阅读、返回顶部） -->
+<!-- <div class="m-fixed m-padded-big m-right-bottom">
+    <div class="ui wechat circular icon right button"><i class="weixin icon"></i></div>
+</div>
+<div class="ui weixin-qr flowing popup transition hidden">
+        <div class="ui vertical icon buttons m-padded-big m-right-bottom">
+            <button class="ui button toc"><i class="align right icon"></i></button>
+            <div id="speak-buttom" class="ui button"><i class="edit icon"></i></div>
+            <div id="toTop-buttom" class="ui button"><i class="arrow circle up icon"></i></div>
+        </div>
+</div>
+<div class="m-fixed m-padded-big m-right-bottom2 ">
+    <div class="ui vertical icon buttons m-padded-big m-right-bottom">
+        <button class="ui circular button toc"><i class="align right icon"></i> 目录</button>
+    </div>
+</div>
+<div class="ui toc-container flowing popup transition hidden" style="width: 250px;">
+    <ol class="js-toc">
+
+    </ol>
+</div> -->
+
+<!-- 底部 -->
+<footer th:replace="PublicTemplate :: footer"></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
+<script th:src="@{/lib/prism/prism.js}" src="../static/lib/prism/prism.js"></script>
+<script th:src="@{/lib/tocbot/tocbot.min.js}" src="../static/lib/tocbot/tocbot.min.js"></script>
+<script>
+    $('.ui.dropdown')
+        .dropdown();
+
+    $('.menu.toggle').click(function () {
+        $('.m-item').toggleClass('m-mobile-hide');
+    });
+
+    $('.toc.button').popup({
+        popup: $('.toc-container.popup'),
+        on: 'click',
+        position: 'left center'
+    });
+
+    $('.wechat').popup({
+        popup: $('.weixin-qr'),
+        on: 'click',
+        position: 'right center'
+    });
+
+    // 初始化目录生成
+    tocbot.init({
+        tocSelector: '.js-toc',
+        contentSelector: '.js-toc-content',
+        headingSelector: 'h1, h2, h3',
+    });
+
+    //PC滑到顶部
+    $('#toTop-buttom').click(function () {
+        $(window).scrollTo(0, 800);
+    });
+
+    //PC滑到底部
+    $('#speak-buttom').click(function () {
+        $(window).scrollTo("max", 800);
+    });
+
+    //mobile滑到顶部
+    $('#mobile-toTop-buttom').click(function () {
+        $(window).scrollTo(0, 800);
+    });
+
+    //mobile滑到底部
+    $('#mobile-speak-buttom').click(function () {
+        $(window).scrollTo("max", 800);
+    });
+
+    $(function(){
+        setTimeout(function(){
+            var buy = document.getElementById('clickMe');//给你的a标签加一个id :btnBuy
+            buy.click();
+        },1000)//后面的500是以毫秒为单位。
+    });
+</script>
+
+</body>
+</html>

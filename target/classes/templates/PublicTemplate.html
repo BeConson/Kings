@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head th:fragment="head">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博客详情</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="../static/css/typo.css" th:href="@{/css/typo.css}"/>
+    <link rel="stylesheet" href="../static/css/conson.css" th:href="@{/css/conson.css}"/>
+    <link rel="stylesheet" href="../static/css/3DPhoto.css" th:href="@{/css/3DPhoto.css}">
+    <link rel="stylesheet" href="../static/lib/prism/prism.css" th:href="@{/lib/prism/prism.css}"/>
+    <link rel="stylesheet" href="../static/lib/tocbot/tocbot.css" th:href="@{/lib/tocbot/tocbot.css}"/>
+</head>
+
+<body>
+
+<!--导航-->
+<nav th:fragment="menu" class="ui inverted segment m-padded-tb-mini All-opacity animated bounceInDown" style="background-color: rgba(244,251,251,0);">
+    <div class="ui container">
+        <div class="ui inverted secondary stackable menu">
+
+            <h2 class="ui yellow header item" style="font-style: oblique;">
+                <img th:src="@{https://consonblog-1257792125.cos.ap-chengdu.myqcloud.com/Kings/indexInformationPicture/wzry.jpg}" src="../static/img/wzry.jpg" alt="" class="ui avatar mini image">欢迎来到王者荣耀</h2>
+            <a th:href="@{/}" href="#" class="m-item item right m-mobile-hide"><i class="home icon"></i>&nbsp;首页</a>
+            <a th:href="@{/AllHeroes/-1}" href="#" class="m-item item m-mobile-hide"><i class="tags icon"></i>&nbsp;全部英雄</a>
+            <a th:href="@{/Allinformation}" href="#" class="m-item item m-mobile-hide"><i class="idea icon"></i>&nbsp;全部资讯</a>
+            <a th:href="@{/AboutGame}" href="#" class="m-item item m-mobile-hide"><i class="game icon"></i>&nbsp;游戏介绍</a>
+            <div class="menu ">
+                <div class="ui dropdown item">
+                    <div class="text">
+                        <i class="user outline icon"></i> 登入
+                    </div>
+                    <i class="dropdown icon"></i>
+                    <div class="menu">
+                        <a th:href="@{/kings}" href="" class="item ">登入</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ui category search right mini m-item item m-mobile-hide">
+                <form name="search" action="#" method="post" th:action="@{/Search}" target="_blank">
+                    <div class="ui icon mini inverted  input m-margin-tb-tiny">
+                        <input th:value="${SearchData}" name="SearchData" class="prompt" type="text" placeholder="Search...">
+                        <i onclick="document.forms['search'].submit()" class="search link icon"></i>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <a id="clickMe" href="#" class="ui menu toggle icon button m-right-top m-mobile-show " style="background-color: rgba(244,251,251,0);">
+       <i class="sidebar icon"></i>
+    </a>
+
+</nav>
+
+<!-- 底部 -->
+<footer th:fragment="footer" class="ui inverted  segment fooder-opacity  animated bounceInRight" style="background-color: rgba(244,251,251,0);">
+    <div class="ui center aligned container">
+        <div class="ui inverted divided stackable grid">
+            <div class="three wide column">
+                <div class="ui inverted link list">
+                    <div class="item">
+                        <img th:src="@{/img/微信.jpg}" src="../static/img/微信.jpg" class="ui rounded image" style="width: 100px;">
+                    </div>
+                </div>
+
+            </div>
+            <div class="three wide column">
+                <h4 class="m-text-spaced m-opacity-mini">站长博客</h4>
+                <div class="inverted link list">
+                    <a href="http://www.conson.club" target="_blank">www.conson.club</a><br>
+                </div>
+            </div>
+            <div class="three wide column">
+                <h4 class="m-text-spaced m-opacity-mini">联系方式</h4>
+                <div class="inverted link list">
+                    <a class="item">Email: csonc@qq.com</a><br>
+                    <a class="item">QQ: 1070068529</a><br>
+                </div>
+            </div>
+            <div class="seven wide column">
+                <h4 class="m-text-spaced m-opacity-mini">小站说明</h4>
+                <a>&nbsp;&nbsp;欢迎来到王者小站，这里为您提供一些网络资讯，增添游戏乐趣！</a>
+            </div>
+        </div>
+        <div class="ui inverted section divider"></div>
+        <p class="m-text-spaced m-opacity-mini" style="text-align: center;">项目起始<br>2020.3.25-2020.4.10</p>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>搜索结果</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" th:href="@{/css/conson.css}" href="../static/css/conson.css"/>
+</head>
+
+<body class="body">
+
+<!--导航-->
+<nav th:replace="PublicTemplate :: menu"></nav>
+
+<!-- 详情内容 -->
+<div class="m-container m-padded-tb-big animated bounceInLeft">
+    <div class="ui container">
+        <!-- rounded -->
+        <div class="ui teal segment">
+            <div class="ui two column grid">
+                <div class="column">
+                    <h3 class="ui teal header-color">查询结果</h3>
+                </div>
+                <div class="right aligned column">
+                    共 <h3 class="ui orange header m-inline-block" th:text="${page.totalElements}">520</h3> 篇
+                </div>
+            </div>
+        </div>
+
+        <!-- 第二栏图片区 -->
+        <div class="ui orange segment">
+
+            <br>
+            <div class="ui centered aligned link cards">
+                <div class="card m-box-shadow" th:each="kings : ${page.content}">
+                    <div class="image">
+                        <img th:src="@{${kings.picture}}" src="../static/img/wz7.jpg">
+                    </div>
+                    <div class="content">
+                        <div class="header" th:text="${kings.title}">Matt Giampietro</div>
+                        <div class="meta">
+                            <a th:text="${kings.type.name}">Friends</a>
+                        </div>
+                        <div class="description" th:text="|${kings.description}...|">
+                            Matthew is an interior designer living in New York.
+                        </div>
+                    </div>
+                    <div class="extra content">
+                        <i class="user icon"></i>
+                        <span class="floated" th:text="${#dates.format(kings.updateTime,'yyyy-MM-dd')}">
+						        Joined in 2013
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+
+		<div class="ui segment" th:if="${page.totalPages}>1">
+			<div class="ui two column grid">
+				<div class="column">
+					<a href="" th:href="@{/(page=${page.number}-1)}"
+					   th:unless="${page.first}" class="ui mini green basic button">上一页</a>
+				</div>
+				<div class="right aligned column">
+					<a href="" th:href="@{/(page=${page.number}+1)}"
+					   th:unless="${page.last}" class="ui mini green basic button">下一页</a>
+				</div>
+			</div>
+		</div><br>
+
+    </div>
+</div>
+</div>
+
+
+<!-- 底部 -->
+<footer th:replace="PublicTemplate :: footer"></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+<script th:src="@{/js/conson.js}" src="../static/js/conson.js" type="text/javascript"></script>
+
+</body>
+</html>

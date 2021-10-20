@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head >
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+</head>
+
+<body>
+
+<!--导航-->
+<nav th:fragment="nav" class="ui inverted segment m-padded-tb-mini animated bounceInDown" style="background-color: rgba(244,251,251,0);">
+    <div class="ui container">
+        <div class="ui inverted secondary stackable menu">
+            <h2 class="ui orange header item">超级管理</h2>
+            <a th:href="@{/}" href="#" class="m-item item right m-mobile-hide"><i class="home icon"></i>&nbsp;首页</a>
+            <a th:href="@{/AllHeroes/-1}" href="#" class="m-item item m-mobile-hide"><i class="tags icon"></i>&nbsp;全部英雄</a>
+            <a th:href="@{/Allinformation}" href="#" class="m-item item m-mobile-hide"><i class="idea icon"></i>&nbsp;全部资讯</a>
+            <a th:href="@{/AboutGame}" href="#" class="m-item item m-mobile-hide"><i class="game icon"></i>&nbsp;游戏介绍</a>
+            <div class="menu">
+                <div class="ui dropdown item">
+                    <div class="text">
+                        <img th:src="@{https://consonblog-1257792125.cos.ap-chengdu.myqcloud.com/%E5%8D%9A%E5%AE%A2%E8%83%8C%E6%99%AF/%E5%A4%B4%E5%83%8F.jpg}" src="../../static/img/头像.jpg" alt="" class="ui avatar image">
+                        康森
+                    </div>
+                    <i class="dropdown icon"></i>
+                    <div class="menu ">
+                        <a href="" class="item ">登入</a>
+                        <a href="" th:href="@{/kings/loginOut}" class="item ">退出</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show"  style="background-color: rgba(244,251,251,0);">
+        <i class="sidebar icon"></i>
+    </a>
+</nav>
+
+<!-- 底部 -->
+<footer th:fragment="footer" class="ui inverted  segment fooder-opacity animated bounceInUp" style="background-color: rgba(244,251,251,0);">
+    <div class="ui center aligned container">
+        <div class="ui inverted divided stackable grid">
+            <div class="three wide column">
+                <div class="ui inverted link list">
+                    <div class="item">
+                        <img th:src="@{https://consonblog-1257792125.cos.ap-chengdu.myqcloud.com/%E5%8D%9A%E5%AE%A2%E8%83%8C%E6%99%AF/%E5%BE%AE%E4%BF%A1.jpg}" src="../../static/img/微信.jpg" class="ui rounded image" style="width: 100px;">
+                    </div>
+                </div>
+
+            </div>
+            <div class="three wide column">
+                <h4 class="m-text-spaced m-opacity-mini">站长博客</h4>
+                <div class="inverted link list">
+                    <a href="http://www.conson.club" target="_blank">www.conson.club</a><br>
+                </div>
+            </div>
+            <div class="three wide column">
+                <h4 class="m-text-spaced m-opacity-mini">联系方式</h4>
+                <div class="inverted link list">
+                    <a class="item">Email: csonc@qq.com</a><br>
+                    <a class="item">QQ: 1070068529</a><br>
+                </div>
+            </div>
+            <div class="seven wide column">
+                <h4 class="m-text-spaced m-opacity-mini">小站说明</h4>
+                <a>&nbsp;&nbsp;欢迎来到王者小站，这里为您提供一些网络资讯，增添游戏乐趣！</a>
+            </div>
+        </div>
+        <div class="ui inverted section divider"></div>
+        <p class="m-text-spaced m-opacity-mini" style="text-align: center;">项目起始<br>2020.3.25-2020.4.10</p>
+    </div>
+</footer>
+
+</body>
+</html>
